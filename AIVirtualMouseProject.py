@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import HandTrackingModule as htm
 import time
-import autopy
+import pyautogui
 
 ##########################
 wCam, hCam = 640, 480
@@ -14,11 +14,11 @@ pTime = 0
 plocX, plocY = 0, 0
 clocX, clocY = 0, 0
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 cap.set(3, wCam)
 cap.set(4, hCam)
 detector = htm.handDetector(maxHands=1)
-wScr, hScr = autopy.screen.size()
+wScr, hScr = pyautogui.screen.size()
 # print(wScr, hScr)
 
 while True:
@@ -47,7 +47,7 @@ while True:
         clocY = plocY + (y3 - plocY) / smoothening
     
         # 7. Move Mouse
-        autopy.mouse.move(wScr - clocX, clocY)
+        pyautogui.mouse.move(wScr - clocX, clocY)
         cv2.circle(img, (x1, y1), 15, (255, 0, 255), cv2.FILLED)
         plocX, plocY = clocX, clocY
         
@@ -60,7 +60,7 @@ while True:
         if length < 40:
             cv2.circle(img, (lineInfo[4], lineInfo[5]),
             15, (0, 255, 0), cv2.FILLED)
-            autopy.mouse.click()
+            pyautogui.mouse.click()
     
     # 11. Frame Rate
     cTime = time.time()
