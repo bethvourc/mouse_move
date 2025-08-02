@@ -1,0 +1,15 @@
+repos:
+  # Ruff → linter + formatter (super-fast, replaces flake8/isort/pylint)
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.4.4            # pin a specific release
+    hooks:
+      - id: ruff           # lint (fails on errors)
+        args: ["--fix", "--show-source"]
+      - id: ruff-format    # ruff's formatter (optional but nice)
+
+  # Black → opinionated code formatter
+  - repo: https://github.com/psf/black
+    rev: 24.4.2
+    hooks:
+      - id: black
+        language_version: python3
