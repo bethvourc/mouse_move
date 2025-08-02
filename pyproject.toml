@@ -1,0 +1,44 @@
+# Project metadata (Poetry-style)
+[tool.poetry]
+name        = "ai-virtual-mouse"
+version     = "0.1.0"
+description = "Camera-based virtual mouse controlled by hand gestures"
+authors     = ["Bethvour bethvourc@gmail.com"]
+readme      = "README.md"
+packages    = [{ include = "ai_virtual_mouse", from = "src" }]
+
+
+# 📦  Runtime dependencies
+[tool.poetry.dependencies]
+python          = "^3.10"
+opencv-python   = "^4.10"
+numpy           = "^1.26"
+pyautogui       = "^0.9"
+# mediapipe     = "^0.10"   # ⬅ uncomment when you reach Step 4
+
+
+# Dev dependencies
+[tool.poetry.group.dev.dependencies]
+black       = "^24.4"
+ruff        = "^0.4"
+pre-commit  = "^3.7"
+
+# Formatting
+[tool.black]
+line-length     = 88
+target-version  = ["py38"]
+
+[tool.ruff]
+line-length     = 88
+target-version  = "py38"
+fix             = true              # auto-apply safe fixes
+lint.extend-select   = ["I", "B"]        # I=import-sort, B=bugbear rules
+lint.ignore          = ["E501"]          # line length handled by Black
+
+[tool.ruff.format]
+preview = true                      # enable ruff-format (optional)
+
+# Build system 
+[build-system]
+requires      = ["poetry-core>=1.7.0"]
+build-backend = "poetry.core.masonry.api"
