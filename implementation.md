@@ -33,7 +33,7 @@
   - **Step Dependencies**: 1
   - **User Instructions**: None (AI will move code).
 
-- [ ] **Step 4: Replace color segmentation with MediaPipe Hands**
+- [x] **Step 4: Replace color segmentation with MediaPipe Hands**
   - **Task**: Create `hand_detector.py` leveraging `mediapipe.solutions.hands`.
   - **Description**: Increases robustness across lighting and skin tones compared with the current HSV mask approach.
   - **Files**:
@@ -43,7 +43,7 @@
 
 ## 3 ‒ Gesture Recognition
 
-- [ ] **Step 5: Implement landmark‑based gesture utilities**
+- [x] **Step 5: Implement landmark‑based gesture utilities**
 
   - **Task**: Add helpers to obtain fingertip positions and distances.
   - **Description**: Forms the basis for click, right‑click, drag & scroll gestures.
@@ -51,7 +51,7 @@
     - `src/ai_virtual_mouse/gestures.py`: new
   - **Step Dependencies**: 4
 
-- [ ] **Step 6: Create `GestureClassifier` for common actions**
+- [x] **Step 6: Create `GestureClassifier` for common actions**
   - **Task**: Classify landmarks into _left click_, _right click_, _scroll_ based on configurable rules.
   - **Description**: Extends functionality beyond the current single “small bbox = click” heuristic.
   - **Files**:
@@ -60,7 +60,7 @@
 
 ## 4 ‒ Cursor Control & Smoothing
 
-- [ ] **Step 7: Introduce `MouseController` abstraction**
+- [x] **Step 7: Introduce `MouseController` abstraction**
 
   - **Task**: Wrap PyAutoGUI calls (`moveTo`, `click`, `scroll`).
   - **Description**: Centralizes OS‑interaction logic and eases mocking in tests.
