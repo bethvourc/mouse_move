@@ -1,0 +1,19 @@
+gesture:
+  click_threshold: 40.0
+  scroll_threshold: 40.0
+  finger_spacing_threshold: 30.0
+
+smoothing:
+  alpha: 0.3
+
+camera:
+  index: 0
+  width: 1280
+  height: 720
+
+region_of_interest:
+  enabled: false
+  x_min: 0.1   # normalized (0 to 1)
+  x_max: 0.9
+  y_min: 0.1
+  y_max: 0.9

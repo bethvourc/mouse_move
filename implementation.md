@@ -68,7 +68,7 @@
     - `src/ai_virtual_mouse/mouse_controller.py`: new
   - **Step Dependencies**: 3
 
-- [ ] **Step 8: Add exponential moving‑average smoothing**
+- [x] **Step 8: Add exponential moving‑average smoothing**
   - **Task**: Implement optional `Smoother` to dampen jitter.
   - **Description**: Produces steadier cursor movement.
   - **Files**:
