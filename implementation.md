@@ -68,7 +68,7 @@
     - `src/ai_virtual_mouse/mouse_controller.py`: new
   - **Step Dependencies**: 3
 
-- [ ] **Step 8: Add exponential moving‑average smoothing**
+- [x] **Step 8: Add exponential moving‑average smoothing**
   - **Task**: Implement optional `Smoother` to dampen jitter.
   - **Description**: Produces steadier cursor movement.
   - **Files**:
@@ -77,7 +77,7 @@
 
 ## 5 ‒ Calibration & Configuration
 
-- [ ] **Step 9: YAML‑based runtime config**
+- [x] **Step 9: YAML‑based runtime config**
 
   - **Task**: Load sensitivities, gesture thresholds, and region‑of‑interest from `config.yaml`.
   - **Description**: Lets users tune performance without code edits.
@@ -86,7 +86,7 @@
     - `src/ai_virtual_mouse/config.py`: new
   - **Step Dependencies**: 6, 8
 
-- [ ] **Step 10: Interactive calibration wizard**
+- [x] **Step 10: Interactive calibration wizard**
   - **Task**: CLI flow that guides users through hand‑range mapping and saves values back to `config.yaml`.
   - **Files**:
     - `src/ai_virtual_mouse/calibrate.py`: new
@@ -94,7 +94,7 @@
 
 ## 6 ‒ User Interface & Feedback
 
-- [ ] **Step 11: On‑screen overlay for visual cues**
+- [x] **Step 11: On‑screen overlay for visual cues**
   - **Task**: Draw landmarks and action labels in OpenCV window with minimal latency.
   - **Description**: Improves UX and debugging.
   - **Files**:
